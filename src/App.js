@@ -20,16 +20,10 @@ const App = () => {
             <div className="container">
               <Alert />
               <Switch>
-                <Route exact path="/">
-                  <Home />
-                </Route>
-                <Route exact path="/about">
-                  <About />
-                </Route>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
                 <Route exact path="/user/:login" component={User} />
-                <Route>
-                  <NotFound />
-                </Route>
+                <Route component={NotFound} />
               </Switch>
             </div>
           </div>
